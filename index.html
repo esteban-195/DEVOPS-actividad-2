@@ -12,7 +12,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <div class="container-fluid d-flex flex-column flex-md-row flex-grow-1 p-0">
+<div class="container-fluid d-flex flex-column flex-md-row flex-grow-1 p-0">
 
     
    <!-- Lado izquierdo con imagen de fondo y texto -->
@@ -23,12 +23,16 @@
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 40, 0.6); z-index: 1;"></div>
 
   <!-- Contenido -->
-  <div class="position-relative z-2 px-4 py-5" style="max-width: 550px;">
+
+<div class="position-relative z-2 px-4 py-5 mx-auto mx-md-0 text-center text-md-start" style="max-width: 550px; max-width: 90vw;">
+
     <!-- Logo y nombre -->
-    <div class="d-flex align-items-center mb-3">
+<div class="d-flex justify-content-center justify-content-md-start align-items-center mb-3">
+
+
       <img src="img/logo-icon.png" alt="Logo" width="40" class="me-2"> <!-- Ajusta el icono si lo tienes -->
-      <div>
-        <h5 class="mb-0 fw-bold">Grancole Pro</h5>
+      <div class="d-flex flex-column text-center text-md-start">
+        <h5 class="fw-bold mb-0">Grancole Pro</h5>
         <small class="text-white-50">Sistema de Gestión Educativa</small>
       </div>
     </div>
@@ -81,7 +85,7 @@
       <!-- Formulario -->
       <div class="card shadow rounded-4 p-4 w-100" style="max-width: 500px;">
         <form>
-          <h5 class="fw-semibold">Iniciar Sesión</h5>
+          <h5 class="fw-bold fs-3">Iniciar Sesión</h5>
           <p class="text-muted">Ingresa tus credenciales para acceder al sistema</p>
 
           <!-- Usuario -->
@@ -106,10 +110,10 @@
           </div>
 
           <div class="mb-3 text-end">
-            <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+            <a href="#" class="text-decoration-none fw-semibold">¿Olvidaste tu contraseña?</a>
           </div>
 
-          <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+          <button type="submit" class="btn btn-primary w-100 py-3">Iniciar Sesión →</button>
 
           <div class="text-center mt-3">
             <small>¿No tienes cuenta? <a href="#">Contacta al administrador</a></small><br>
