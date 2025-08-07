@@ -15,11 +15,59 @@
     <div class="container-fluid d-flex flex-column flex-md-row flex-grow-1 p-0">
 
     
-    <!-- Lado izquierdo -->
-    <div class="col-12 col-md-6 bg-light d-flex align-items-center justify-content-center" style="min-height: 200px;">
-      <!-- Aquí podrías poner una imagen o texto -->
-      <img src="img/img2.png" alt="Imagen educativa" class="img-fluid">
+   <!-- Lado izquierdo con imagen de fondo y texto -->
+<div class="col-12 col-md-6 d-flex align-items-center justify-content-center position-relative text-white overflow-hidden"
+     style="min-height: 200px; background-image: url('img/img2.png'); background-size: cover; background-position: center;">
+  
+  <!-- Capa oscura -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 40, 0.6); z-index: 1;"></div>
+
+  <!-- Contenido -->
+  <div class="position-relative z-2 px-4 py-5" style="max-width: 550px;">
+    <!-- Logo y nombre -->
+    <div class="d-flex align-items-center mb-3">
+      <img src="img/logo-icon.png" alt="Logo" width="40" class="me-2"> <!-- Ajusta el icono si lo tienes -->
+      <div>
+        <h5 class="mb-0 fw-bold">Grancole Pro</h5>
+        <small class="text-white-50">Sistema de Gestión Educativa</small>
+      </div>
     </div>
+
+    <!-- Título -->
+    <h3 class="fw-bold mb-3" style="font-size: 1.8rem;">Gestiona tu institución educativa de manera inteligente</h3>
+
+    <!-- Descripción -->
+    <p class="mb-4" style="font-size: 1rem;">
+      Plataforma integral para administrar estudiantes, profesores, calificaciones, asistencia y mucho más en un solo lugar.
+    </p>
+
+    <!-- Lista de beneficios -->
+    <ul class="list-unstyled" style="font-size: 0.95rem;">
+      <li class="mb-2">🟢 Gestión completa de estudiantes y profesores</li>
+      <li class="mb-2">🟢 Sistema de calificaciones y boletines</li>
+      <li class="mb-2">🟢 Control de asistencia en tiempo real</li>
+      <li class="mb-2">🟢 Comunicación integrada y foros</li>
+    </ul>
+
+    <!-- Métricas -->
+    <div class="d-flex mt-4 justify-content-between" style="font-size: 0.95rem;">
+      <div>
+        <strong>1,234+</strong><br>
+        <small>Estudiantes</small>
+      </div>
+      <div>
+        <strong>45+</strong><br>
+        <small>Cursos</small>
+      </div>
+      <div>
+        <strong>98%</strong><br>
+        <small>Certificaciones</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     <!-- Lado derecho -->
     <div class="col-12 col-md-6 bg-primary-subtle p-4 d-flex flex-column align-items-center justify-content-center">
