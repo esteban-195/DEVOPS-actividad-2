@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GranCole - Iniciar Sesión</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<div class="container-fluid d-flex flex-column flex-md-row flex-grow-1 p-0">
+
+    
+   <!-- Lado izquierdo con imagen de fondo y texto -->
+<div class="col-12 col-md-6 d-flex align-items-center justify-content-center position-relative text-white overflow-hidden"
+     style="min-height: 200px; background-image: url('img/img2.png'); background-size: cover; background-position: center;">
+  
+  <!-- Capa oscura -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 40, 0.6); z-index: 1;"></div>
+
+  <!-- Contenido -->
+
+<div class="position-relative z-2 px-4 py-5 mx-auto mx-md-0 text-center text-md-start" style="max-width: 550px; max-width: 90vw;">
+
+    <!-- Logo y nombre -->
+<div class="d-flex justify-content-center justify-content-md-start align-items-center mb-3">
+
+
+      <img src="img/logo-icon.png" alt="Logo" width="40" class="me-2"> <!-- Ajusta el icono si lo tienes -->
+      <div class="d-flex flex-column text-center text-md-start">
+        <h5 class="fw-bold mb-0">Grancole Pro</h5>
+        <small class="text-white-50">Sistema de Gestión Educativa</small>
+      </div>
+    </div>
+
+    <!-- Título -->
+    <h3 class="fw-bold mb-3" style="font-size: 1.8rem;">Gestiona tu institución educativa de manera inteligente</h3>
+
+    <!-- Descripción -->
+    <p class="mb-4" style="font-size: 1rem;">
+      Plataforma integral para administrar estudiantes, profesores, calificaciones, asistencia y mucho más en un solo lugar.
+    </p>
+
+    <!-- Lista de beneficios -->
+    <ul class="list-unstyled" style="font-size: 0.95rem;">
+      <li class="mb-2">🟢 Gestión completa de estudiantes y profesores</li>
+      <li class="mb-2">🟢 Sistema de calificaciones y boletines</li>
+      <li class="mb-2">🟢 Control de asistencia en tiempo real</li>
+      <li class="mb-2">🟢 Comunicación integrada y foros</li>
+    </ul>
+
+    <!-- Métricas -->
+    <div class="d-flex mt-4 justify-content-start gap-5" style="font-size: 1.5rem;">
+      <div>
+        <strong>1,234+</strong><br>
+        <small>Estudiantes</small>
+      </div>
+      <div>
+        <strong>45+</strong><br>
+        <small>Cursos</small>
+      </div>
+      <div>
+        <strong>98%</strong><br>
+        <small>Certificaciones</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Lado derecho -->
+    <div class="col-12 col-md-6 bg-primary-subtle p-4 d-flex flex-column align-items-center justify-content-center">
+      <!-- Cabecera -->
+      <div class="text-center mb-3">
+        <img src="img/logo.png" alt="Logo GranCole" width="80">
+        <h4 class="mt-3 fw-bold">Bienvenido a GranCole</h4>
+        <p class="text-muted">Inicia sesión para continuar</p>
+      </div>
+
+      <!-- Formulario -->
+      <div class="card shadow rounded-4 p-4 w-100" style="max-width: 500px;">
+        <form>
+          <h5 class="fw-bold fs-3">Iniciar Sesión</h5>
+          <p class="text-muted">Ingresa tus credenciales para acceder al sistema</p>
+
+          <!-- Usuario -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Usuario</label>
+            <div class="input-container">
+              <span class="input-icon">👤</span>
+              <input type="text" class="form-control input-con-icon" id="username" placeholder="0000000">
+              <button class="btn btn-danger opciones-btn" type="button" onclick="mostrarMenu('usuario')">⋯</button>
+            </div>
+          </div>
+
+          <!-- Contraseña -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="input-container">
+              <span class="input-icon">🔒</span>
+              <input type="password" class="form-control input-con-icon" id="password" placeholder="●●●●●●●●">
+              <button class="btn btn-danger opciones-btn" type="button" onclick="mostrarMenu('password')">⋯</button>
+              <button class="toggle-password" type="button" onclick="togglePassword()">👁</button>
+            </div>
+          </div>
+
+          <div class="mb-3 text-end">
+            <a href="#" class="text-decoration-none fw-semibold">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 py-3">Iniciar Sesión →</button>
+
+          <div class="text-center mt-3">
+            <small>¿No tienes cuenta? <a href="#">Contacta al administrador</a></small><br>
+            <small class="text-muted">© 2025 GranCole Pro. Todos los derechos reservados.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-auto text-center py-3 bg-light">
+    © 2025 GranColePro. Todos los derechos reservados. Diseñado por Agencia Cristal.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function mostrarMenu(campo) {
+      alert(`Opciones para el campo: ${campo}`);
+    }
+
+    function togglePassword() {
+      const input = document.getElementById("password");
+      input.type = input.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
+
+<!-- git branch -d feature/login /// BORRAR RAMAS LOCALES-->
+
+<!-- git push origin --delete feature/login /// BORRAR RAMAS REMOTAS-->
+
+<!-- git remote set-head origin -a /// ESTABLECER RECONOCER RAMA PPAL DEL REMOTO AL LOCAL-->
+
+<!-- git switch develope /// PARA CAMBIAR DE RAMA -->
+
+<!-- git switch -c feature/login /// CREAR Y CAMBIAR A UNA NUEVA RAMA -->
